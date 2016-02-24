@@ -8,12 +8,6 @@
     {
         display: block;
     }
-
-   .navbar-collapse.collapse
-    {
-        display: block !important;
-      
-    }
     
     .navbar-nav {
 		float: none!important;		
