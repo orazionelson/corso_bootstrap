@@ -1,0 +1,30 @@
+@media (min-width: 768px){
+    .navbar-header
+    {
+        float: none;
+    }
+
+    .navbar-toggle
+    {
+        display: block;
+    }
+
+   .navbar-collapse.collapse
+    {
+        display: block !important;
+      
+    }
+    
+    .navbar-nav {
+		float: none!important;		
+	}
+
+	.navbar-nav>li {
+		float: none;
+	}
+
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
