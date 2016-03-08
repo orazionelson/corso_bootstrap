@@ -1,0 +1,91 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="How to show the bootstrap mobile menu at any resolution">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }     
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Collapse</h1>
+        <p>Nasconde o rivela un elemento</p>
+      </div>
+    </div>
+    <div class="container">
+		<p>Come si combina:</p>
+		<p>Nel bottone o nel link che lancia l'evento:</p>
+		<ul>
+		<li>Trigger: <code>data-toggle="collapse"</code></li>
+		<li>Puntatore: <code>data-target="#collapseExample"</code></li>
+		</ul>
+		<p>Nell'elemento che collassa:</p>
+		<ul><li>Id corrispondente al <code>data-target</code> del bottone. Es. <code>id="collapseExample"</code></li></ul>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Lorem ipsum...
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas.
+  </div>
+</div>
+<hr>
+<pre class="pretty-pre">
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  Lorem ipsum...
+</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas.
+  </div>
+</div>
+</pre>
+
+</p>
+	
+	<hr>
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

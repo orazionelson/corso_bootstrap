@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Affix &amp; Scrollspy</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Bootstrap Affix &amp; Scrollspy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+  body {
+      position: relative; 
+  }
+  
+  .affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+  
+  #intro {padding-top:50px;min-height:500px;color: #000; border:10px solid #1E88E5;}
+  #affix {padding-top:50px;min-height:500px;color: #000; border:10px solid #673ab7;}
+  #scrollspy {padding-top:50px;min-height:500px;color: #000; border:10px solid #ff9800;}
+  #section41 {padding-top:50px;min-height:500px;color: #000; border:10px solid #00bcd4;}
+  #section42 {padding-top:50px;min-height:500px;color: #000; border:10px solid #009688;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+
+<div class="container-fluid" style="background-color:#ABC;color:#000;height:200px;">
+  <h1>Affix &amp; Scrollspy</h1>
+</div>
+
+<nav id="main-navbar" class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#affix">Affix</a></li>
+          <li><a href="#scrollspy">Scrollspy</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Section 4-1</a></li>
+              <li><a href="#section42">Section 4-2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="intro" class="container-fluid">
+	<h2>Intro</h2>
+  <p>Affix permette di bloccare un elemento sulla pagina prima che scompaia nello scrolling.</p>
+  <p>Scrollspy evidenzia automaticamente gli elementi del menù in funzione della posizione della pagina sullo schermo</p>
+  <p>Entrambi sono attivati tramite l'attributo <code>data-spy</code></p>
+  <p>cfr. <a href="http://www.w3schools.com/bootstrap/bootstrap_affix.asp">http://www.w3schools.com/bootstrap/bootstrap_affix.asp</a></p>
+  <p>Il codice di questo esempio è adattato da <a href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_scrollspy_affix&stacked=h">W3School Affix &amp; Scrollspy</a></p>
+</div>
+<div id="affix" class="container-fluid">
+  <h2>Affix</h2>
+   <p>Scorrendo la pagina la barra di navigazione rimane incollata in alto senza scomparire.</p>
+   <p>Come si attiva:</p>
+		<p>Nell'elemento che si vuole bloccare:</p>
+		<ul>
+		<li>Trigger: <code>data-spy="affix"</code></li>
+		<li>Offset: pixel da compensare nel calcolo della posizione di scorrimento <code>data-offset-top|bottom="..."</code>
+		</li>
+		</ul>
+	<pre class="pretty-pre">
+<nav id="main-navbar" class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+	<div class="container-fluid">
+	  ...
+	</div>
+</nav>	
+	</pre>
+	
+	<div class="alert alert-danger">NB: affix richiede l'aggiunta di css per funzionare correttamente, come in questa pagina di esempio.</div>
+<pre><code>
+.affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }
+</code></pre>
+	
+</div>
+<div id="scrollspy" class="container-fluid">
+  <h2>Scrollspy</h2>	
+  <p>Scorrendo la pagina si vedranno i link della barra di navigazione cambiare stato.</p>
+  <p>Scrollspy infatti tiene sotto controllo gli <code>id</code> delle sezioni di un elemento e i link di un elemento target verso le sezioni. Tipicamente si assegna al <code>body</code> così da evidenziare nella navbar la posizione della pagina.</p>
+  <p>Trigger: <code>data-spy="scroll"</code></p>
+  <p>Target: <code>data-target="#main-navbar"</code></p>
+  <h3>Esempio</h3>
+  <h4>Il body</h4>
+  <pre><code>
+  &lt;body data-spy="scroll" data-target="#main-navbar"&gt;
+  </code></pre>
+  <h4>La navbar</h4>
+  <pre class="pretty-pre">
+&lt;nav id="main-navbar" class="navbar... 
+	...
+	<li><a href="#intro">Intro</a></li>
+	...
+  </pre>
+  <h4>Nella pagina</h4>
+  <pre><code>&lt;div id="intro" ...</code></pre>
+  <div class="alert alert-info">
+	<p>IMPORTANTE! Il contenitore da tenere sotto controllo DEVE avere nel CSS con valore <code>position: relative;</code>.</p>
+	<p>Quindi in questo caso, siccome è <code>body</code> il contenitore dovremo aggiungere:</p>
+	<pre><code>
+body {
+  position: relative; 
+}
+	</code></pre>
+  </div>
+</div>
+<div id="section41" class="container-fluid">
+  <h1>Section 4 Submenu 1</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas.
+
+Proin vulputate dui nibh, et molestie turpis malesuada ut. Sed blandit elit at purus convallis scelerisque. Sed dictum sollicitudin nisi nec imperdiet. In at eros venenatis, efficitur eros eget, auctor neque. Vestibulum rutrum, nunc a hendrerit sollicitudin, turpis ex eleifend quam, id laoreet lectus velit eu arcu. Aenean nunc libero, eleifend at elit et, finibus porttitor felis. Nulla facilisi. Cras mattis tortor a nulla sollicitudin scelerisque. Vestibulum laoreet tellus sed mauris mattis mattis.
+
+Maecenas ex dui, porta vel consequat in, aliquet vitae lacus. Nunc consectetur ullamcorper pharetra. Fusce sagittis dignissim tortor, eu dignissim ligula semper a. Quisque pellentesque maximus magna, consectetur interdum sem tincidunt vel. Suspendisse potenti. Praesent id est ac lacus tincidunt facilisis. Morbi sodales elementum sem sed aliquet. Pellentesque orci odio, vestibulum rutrum arcu ornare, fringilla auctor erat. Proin sem sem, iaculis a sapien ut, aliquam laoreet risus. Pellentesque a odio scelerisque felis condimentum aliquam. Mauris nec pulvinar mauris. Nulla condimentum arcu nibh, et faucibus libero rhoncus a.</p>
+
+</div>
+<div id="section42" class="container-fluid">
+  <h2>Section 4 Submenu 2</h2>
+	<p>Pellentesque at velit mi. Sed semper maximus laoreet. Curabitur vel blandit est. Pellentesque pellentesque lectus elit, ac vulputate nibh pharetra pellentesque. Aenean hendrerit in dui et vulputate. In nec purus nec mi vulputate tristique. Donec porta, arcu facilisis eleifend convallis, erat risus scelerisque dolor, eu auctor lorem quam eu neque. Nam et tellus sollicitudin, fringilla quam nec, condimentum felis. Ut egestas ut urna id porta.</p>
+	<p>In quis augue pharetra, ultrices elit eget, tincidunt libero. Nulla eu sem turpis. Praesent eros enim, convallis quis blandit in, suscipit vel odio. Curabitur molestie sollicitudin massa, non egestas elit. Proin sagittis, sapien sed varius vehicula, tellus nulla luctus orci, non sollicitudin est purus non velit. In ultrices urna nec dui volutpat accumsan in nec lacus. Curabitur euismod semper leo et laoreet. Nam a vehicula ex. Mauris in nisi diam. Nunc et pellentesque nibh, ac varius turpis.</p>
+</div>
+<div class="container-fluid">
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>		
+	</body>
+</html>

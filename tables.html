@@ -1,0 +1,338 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tables</title>
+        <meta name="description" content="Bootstrap Tables">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Tabelle</h1>
+        <p>Classi per l'elemento <strong>table</strong></p>
+<code>.table<br>
+.table-striped<br>
+.table-bordered<br>
+.table-hover<br>
+.table-condensed<br>
+.table-responsive</code>
+
+<p>Stili per righe <strong>tr</strong> e celle <strong>td</strong></p>
+<code>.active<br>	
+.success<br>
+.info<br>
+.warning<br>
+.danger</code>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+		<h2>Esempi</h2>
+		<h3>Basic</h3>
+		<p><code>.table</code></p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
+		<h3>Striped</h3>
+		<p><code>.table-striped</code></p>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>		          
+          <hr>		
+		<h3>Bordered</h3>
+		<p><code>.table-bordered</code></p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>		
+    
+          <hr>		
+		<h3>Hover</h3>
+		<p>Le righe sono sensibili al passaggio del mouse</p>
+		<p><code>.table-hover</code></p>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>		
+    
+          <hr>		
+		<h3>Condensed</h3>
+		<p><code>.table-condensed</code></p>
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>		
+        <hr>		
+		<h3>Stili per righe e celle</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="active">cella .active</td>
+                <td class="success">cella .success</td>
+                <td class="danger">cella .danger</td>
+                <td  class="info">cella .info</td>
+              </tr>
+              <tr class="active">
+                <td>riga .active</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr class="success">
+                <td>riga .success</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr class="warning">
+                <td>riga .warning</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+              <tr class="danger">
+                <td>riga .danger</td>
+                <td>Nicola</td>
+                <td>Verdi</td>
+                <td>Farmacia</td>
+              </tr>
+              <tr class="info">
+                <td>riga .info</td>
+                <td>Lorenzo</td>
+                <td>Montebello</td>
+                <td>Panetteria</td>
+              </tr>
+              
+            </tbody>
+          </table>			
+        <hr>		
+		<h3>Responsive</h3>
+		<p><code>.table-responsive</code></p>
+		<p>La tabella scrolla orizzontalmente per i device con una viewport &lt;768px</p>
+		<p>NB: la classe va nel contenitore della tabella, non in essa</p>
+		<pre class="pretty-pre">
+	&lt;div class="table-responsive">
+		&lt;table class="table">
+			&lt;thead>
+			...
+		</pre>
+		<div class="table-responsive" style="width:150px; border:1px solid black">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Via</th>
+                <th>Lavoro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Mario</td>
+                <td>Roma</td>
+                <td>Abbigliamento</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Luigi</td>
+                <td>Garibaldi</td>
+                <td>Ristorazione</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Antonio</td>
+                <td>Mazzini</td>
+                <td>Informatica</td>
+              </tr>
+            </tbody>
+          </table>		
+		</div>
+          <hr>		
+    
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

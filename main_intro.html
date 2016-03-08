@@ -1,0 +1,200 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Introduzione a Bootstrap</title>
+        <meta name="description" content="Introduzione, da HTML a HTML5 a Bootstrap.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            
+            
+            .modal-dialog {
+				margin-top:0;
+
+			  width: 800px;
+			  
+			  padding: 0;
+			}
+			
+			.modal-content {
+			  
+			  border-radius: 0;
+			}
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Introduzione</h1>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="panel panel-success">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Basi</h3>
+				    </div>
+				  <div class="panel-body"> 
+					<p><a href="#pdfview" data-toggle="modal" data-title="Da HTML a HTML5" data-file="l11">Da HTML a HTML5</a></p>
+					<p><a href="#pdfview" data-toggle="modal" data-title="HTML5" data-file="l12">HTML5</a></p>
+					<p><a href="#pdfview" data-toggle="modal" data-title="CSS3" data-file="l13">CSS3</a></p>
+					<p><a href="#pdfview" data-toggle="modal" data-title="Alcuni principi di desing" data-file="l14">Alcuni principi di design</a></p>
+					<p><a href="#pdfview" data-toggle="modal" data-title="Framework HTML5" data-file="l15">I framework HTML5</a></p>
+				  </div>
+				</div>
+				<div class="panel panel-info">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Risorse</h3>
+				   </div>
+				  <div class="panel-body"> 
+					<h3>Temi e template</h3>
+					<p><a href="http://getbootstrap.com/getting-started/#examples">Official Bootstrap Samples</a></p>
+					<p><a href="http://startbootstrap.com/">http://startbootstrap.com/</a></p>
+					<p><a href="https://bootswatch.com/">https://bootswatch.com/</a></p>
+					<p><a href="http://www.bootstrapzero.com/">http://www.bootstrapzero.com/</a></p>
+					<p><a href="http://www.gettemplate.com/">http://www.gettemplate.com/</a></p>
+					<p><a href="http://bootstraptaste.com/">http://bootstraptaste.com/</a></p>
+					<p><a href="https://www.prepbootstrap.com/">https://www.prepbootstrap.com/</a></p>
+					<h3>Codice</h3>
+					<p><a href="http://www.bootply.com/">http://www.bootply.com/</a></p>
+					<p><a href="http://codepen.io/">http://codepen.io/</a></p>
+				  </div>
+				</div>
+				<div class="panel panel-warning">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Web developer Toolbar</h3>
+				  </div>
+				  <div class="panel-body">
+					<p>Un'estensione per il browser di cui non si può fare a meno. Permette di operare su i CSS, i Javascript, i cookies o le immagini. Valida la pagina e consente di esaminarla a diverse risoluzioni. Disponibile per Firefox, Chrome e Opera.</p>
+					<p><a href="http://chrispederick.com/work/web-developer/">http://chrispederick.com/work/web-developer/</a></p>
+					<p><a href="https://it.wikipedia.org/wiki/Web_Developer_Toolbar">https://it.wikipedia.org/wiki/Web_Developer_Toolbar</a></p>
+					</div>
+				</div>												
+			</div>
+			<div class="col-sm-8 text-success">
+				<div class="panel panel-success">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Strumenti</h3>
+				  </div>
+				  <div class="panel-body">  
+				<h3>Il sito di Bootstrap</h3>
+				<p class="lead"><a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+				<h3>W3Schools Bootstrap Reference</h3>
+				<p class="lead"><a href="http://www.w3schools.com/bootstrap/default.asp">http://www.w3schools.com/bootstrap/default.asp</a></p>
+				<h3>Initializr</h3>
+				<p>HTML5Boilerplate + Bootstrap</p>
+				<p>Un'intuitiva interfaccia per mettere assieme le <em>best practices</em> di <a href="https://html5boilerplate.com/">HTML5Boilerplate</a> con le qualità di Bootstrap.</p>
+				<p class="lead"><a href="http://www.initializr.com/">http://www.initializr.com/</a></p>
+				<h3>Pingendo</h3>
+				<p>Un IDE grafico con cui creare i vostri prototipi per Bootstrap. Completamente FREE. Disponibile per Windows, Mac e Linux.</p>
+				<p class="lead"><a href="http://pingendo.com/">http://pingendo.com/</a></p>
+				<h3>Assets framework</h3>
+				<p>Bootstrap esteso e completamente accessibile</p>
+				<p class="lead"><a href="http://assets.cms.gov/">http://assets.cms.gov/</a></p>
+				<h3>Cocktail</h3>
+				<p>Codeigniter3 + HTML5Boilerplate5 + Bootstrap3</p>
+				<p class="lead"><a href="http://www.nelsonweb.it/cocktail/">http://www.nelsonweb.it/cocktail/</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Tip: il server locale</h3>
+			</div>
+			<div class="panel-body">  				
+		<p>Anche se il browser interpreta senza problemi HTML è sempre meglio richiamare il nostro progetto tramite un meccanismo client-server usando il protocollo http e non direttamente dal filesystem.</p>
+		<p>Per emulare il meccanismo client-server sul nostro pc locale possiamo usare:</p>
+		<br>
+		<h3>Xampp / Lampp</h3>
+		<ul>
+			<li>Installare l’ambiente <a href="https://www.apachefriends.org/it/index.html">Xampp</a> o <a href="http://www.chimerarevo.com/linux/ubuntu-14-04-installare-xampp-lamp-167572/">Lampp</a>.</li>
+			<li>Copiare il progetto nella directory radice/root del web-server locale e quindi puntare alla pagina:	http://localhost/mioprogetto</li>
+		</ul>
+		<hr>
+		<h3>Server-web minimale di <a href="https://nodejs.org/en/">Node.js</a></h3>
+		<ul>
+			<li>Installare Node.js e npm, cfr. <a href="https://docs.npmjs.com/getting-started/installing-node">https://docs.npmjs.com/getting-started/installing-node</a>.
+			</li> 
+			<li>Installare un http server:
+				<ul>
+					<li>Con Windows, da amministratore, aprire cmd.exe o la Poweshell e dare il comando:<pre><code>npm install -g http-server</code></pre></li>
+					<li>Con linux e mac, aprire un terminale e dare il comando:<pre><code>sudo npm install -g http-server</code></pre>
+					</li>
+				</ul>
+			</li>
+			<li>Quindi nella cartella del nostro progetto, sempre da terminale avviare il server: <pre class="lead"><code>http-server -c-1</code></pre></li>
+			<li>A questo punto il nostro progetto con Bootstrap sarà raggiungibile all'indirizzo: http://localhost:8080 o http://127.0.0.1:8080
+			</li>	
+		</ul>
+			</div>
+		</div>
+
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+<div class="modal fade text-center" id="pdfview" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+		  <embed width="770" height="570" type="application/pdf"></embed>
+      </div>
+    </div>
+  </div>
+</div>    
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+$('#pdfview').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('title') // Extract info from data-* attributes
+  var file = button.data('file') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text(recipient)
+  //modal.find('.modal-body').text(file)
+  modal.find('.modal-body embed').attr('src','pdf/'+file+'.pdf')
+})		
+		</script>
+    </body>
+</html>

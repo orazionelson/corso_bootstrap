@@ -1,0 +1,169 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Font Awesome</title>
+        <meta name="description" content="Bootstrap fontawesome">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Font awesome</h1>
+        <p>Una galleria di icone semplicemente splendide</p>
+        <a href="https://fortawesome.github.io/Font-Awesome/">https://fortawesome.github.io/Font-Awesome/</a>
+      </div>
+    </div>
+    <div class="container">
+		<p>Se le icone incorporate in bootstrap non dovessero essere sufficienti esiste un ulteriore set open source: Font Awesome.</p>
+		<p>Il modo più semplice di incorporare font awesome è aggiungere la stringa del CDN appena dopo il link al CSS di bootstrap nella HEAD del documento HTML.</p>
+
+<pre>
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"&gt;
+</pre>
+<p>Per usare le icone di Font Awesome, basta aggiungere le classi di FA a un elemento vuoto</p>
+<pre class="pretty-pre">
+<span class="fa fa-camera-retro"></span>	
+</pre> 
+<p>Anche se la documentazione di FA suggerisce di usare il tag <code>i</code> (italic), ancora valido in HTML5 ma sostituito da <code>em</code>, così:</p>
+<pre class="pretty-pre">
+<i class="fa fa-camera-retro"></i>	
+</pre> 
+<p>Esempi:<br>
+	<i class="fa fa-camera-retro"></i><br>	
+	<i class="fa fa-shield"></i><br>
+	<i class="fa fa-twitter"></i>
+</p>
+<p>Le icone di FA hanno 5 misure:</p>
+<pre class="pretty-pre">
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x
+</pre>
+<p><i class="fa fa-camera-retro fa-lg"></i> fa-lg<br>
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x<br>
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x<br>
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x<br>
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x</p>
+<hr>
+<p>&Egrave; possibile settarle a grandezza fissa con la classe: <code>fa-fw</code>.</p>
+<pre class="pretty-pre">
+<div class="list-group">
+  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+</div>
+</pre>
+<p>
+<div class="list-group">
+  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+</div>
+</p>
+<hr>
+<p>Con le classi <code>fa-ul</code> e <code>fa-li</code> è possibile usarle al posto dei bullet di una lista.</p>
+<pre class="pretty-pre">
+<ul class="fa-ul">
+  <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+  <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+  <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+  <li><i class="fa-li fa fa-square"></i>in lists</li>
+</ul>
+</pre>
+<ul class="fa-ul">
+  <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+  <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+  <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+  <li><i class="fa-li fa fa-square"></i>in lists</li>
+</ul>
+<hr>
+<p>Le icone possono essere ruotate o invertite con le classi: <code>fa-rotate-*</code> and <code>fa-flip-*</code>.</p>
+<p><i class="fa fa-shield"></i> normal<br>
+<i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
+<i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br>
+<i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br>
+<i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br>
+<i class="fa fa-shield fa-flip-vertical"></i> fa-flip-vertical</p>
+<pre class="pretty-pre">
+<i class="fa fa-shield"></i> normal<br>
+<i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
+<i class="fa fa-shield fa-rotate-180"></i> fa-rotate-180<br>
+<i class="fa fa-shield fa-rotate-270"></i> fa-rotate-270<br>
+<i class="fa fa-shield fa-flip-horizontal"></i> fa-flip-horizontal<br>
+<i class="fa fa-shield fa-flip-vertical"></i> fa-flip-vertical
+</pre>
+<hr>
+<p>Oppure possono essere composte:</p>
+<p><span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-square-o<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+</span>
+fa-flag on fa-circle<br></p>
+<pre class="pretty-pre">
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+fa-twitter on fa-square-o<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+</span>
+fa-flag on fa-circle<br>
+</pre>
+<p>cfr. anche <a href="http://nelsondev.blogspot.it/2014/04/awesome-icons-with-font-awesome.html">http://nelsondev.blogspot.it/2014/04/awesome-icons-with-font-awesome.html</a></p>
+	<hr>
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

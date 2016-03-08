@@ -1,0 +1,126 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Corso Bootstrap</title>
+        <meta name="description" content="Corso Bootstrap">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+         footer {
+				margin-top:60px;
+				margin-bottom:40px;
+				}
+            
+   
+            
+        </style>
+		
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Corso Bootstrap <small>v. 3.3.6</small></h1>
+        <p></p>
+      </div>
+    </div> 
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">				
+				<div class="alert text-center">
+					<a href="main_intro.html" class="btn btn-success btn-lg btn-block">Intro</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h2>Componenti CSS</h2>
+				<div id="componenti" class="list-group">
+					<a class="list-group-item" href="navbar.html">Navbar</a>				
+					<a class="list-group-item" href="navbar_mobile_always.html">Navbar Mobile Always</a>				
+					<a class="list-group-item" href="glyphicons.html">Glyphicons</a>
+					<a class="list-group-item" href="container.html">Container</a>
+					<a class="list-group-item" href="jumbotron.html">Jumbotron</a>
+					<a class="list-group-item" href="grids.html">Griglie</a>
+					<a class="list-group-item" href="images.html">Immagini</a>
+					<a class="list-group-item" href="buttons.html">Bottoni</a>
+					<a class="list-group-item" href="tables.html">Tabelle</a>
+					<a class="list-group-item" href="forms.html">Forms</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h2>Javascript</h2>
+				<div class="list-group">
+					<a class="list-group-item" href="jsintro.html">Intro</a>
+				</div>
+				<div id="javascript" class="list-group">
+					<a class="list-group-item" href="collapse.html">Collapse</a>
+					<a class="list-group-item" href="dropdown.html">Dropdown</a>
+					<a class="list-group-item" href="button.html">Button</a>
+					<a class="list-group-item" href="modal.html">Modal</a>
+					<a class="list-group-item" href="tabs.html">Tabs</a>
+					<a class="list-group-item" href="tooltip_popover.html">Tooltip &amp; Popover</a>	
+				</div>
+				<div class="list-group">
+					<a class="list-group-item" href="affix_scrollspy.html">Affix &amp; Scrollspy</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h2>Estendere Bootstrap</h2>
+				<div id="extend" class="list-group">
+					<a class="list-group-item" href="smoothscroll.html">Smooth scroll</a>
+					<a class="list-group-item" href="fontawesome.html">FontAwesome</a>
+					<a class="list-group-item" href="validator.html">Bootstrap validator</a>
+					<a class="list-group-item" href="parallax_sfondo.html">Parallax sullo sfondo</a>
+					<a class="list-group-item" href="parallax_nav.html">Parallax con la Navbar</a>
+					<a class="list-group-item" href="offcanvas.html">Off-canvas</a>
+					<a class="list-group-item" href="datatables.html">DataTables</a>
+					<a class="list-group-item" href="tour.html">Bootstrap Tour</a>
+					<a class="list-group-item" href="image_gallery.html">Image Gallery</a>		
+				</div>	
+			</div>
+		</div>
+		
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tinysort/2.2.4/tinysort.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		
+tinysort('#componenti>a');
+tinysort('ul#javascript>li');
+
+			
+		});
+		</script>
+    </body>
+</html>

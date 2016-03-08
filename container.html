@@ -1,0 +1,105 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Container</title>
+        <meta name="description" content="Bootstrap container">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Container</h1>
+        <p>Le classi <code>.container</code> e <code>.container-flow</code> si utlizzano per identificare le porzioni principali della pagina.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="alert alert-danger">
+		<p>Tip: E' vivamente sconsigliato innestare elementi con classe .container.</p> 
+		<p>Sbagliato:</p>
+		<pre class="pretty-pre">
+			<div class="container">
+				<div class="container">
+					...
+				</div>
+			</div>
+		</pre> 
+	</div>
+    <div class="container">
+		<h2>.container</h2>
+		<div class="well">
+			<p>100% dello spazio CON padding laterale</p>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas.
+
+Proin vulputate dui nibh, et molestie turpis malesuada ut. Sed blandit elit at purus convallis scelerisque. Sed dictum sollicitudin nisi nec imperdiet. In at eros venenatis, efficitur eros eget, auctor neque. Vestibulum rutrum, nunc a hendrerit sollicitudin, turpis ex eleifend quam, id laoreet lectus velit eu arcu. Aenean nunc libero, eleifend at elit et, finibus porttitor felis. Nulla facilisi. Cras mattis tortor a nulla sollicitudin scelerisque. Vestibulum laoreet tellus sed mauris mattis mattis.
+
+Maecenas ex dui, porta vel consequat in, aliquet vitae lacus. Nunc consectetur ullamcorper pharetra. Fusce sagittis dignissim tortor, eu dignissim ligula semper a. Quisque pellentesque maximus magna, consectetur interdum sem tincidunt vel. Suspendisse potenti. Praesent id est ac lacus tincidunt facilisis. Morbi sodales elementum sem sed aliquet. Pellentesque orci odio, vestibulum rutrum arcu ornare, fringilla auctor erat. Proin sem sem, iaculis a sapien ut, aliquam laoreet risus. Pellentesque a odio scelerisque felis condimentum aliquam. Mauris nec pulvinar mauris. Nulla condimentum arcu nibh, et faucibus libero rhoncus a.
+
+Pellentesque at velit mi. Sed semper maximus laoreet. Curabitur vel blandit est. Pellentesque pellentesque lectus elit, ac vulputate nibh pharetra pellentesque. Aenean hendrerit in dui et vulputate. In nec purus nec mi vulputate tristique. Donec porta, arcu facilisis eleifend convallis, erat risus scelerisque dolor, eu auctor lorem quam eu neque. Nam et tellus sollicitudin, fringilla quam nec, condimentum felis. Ut egestas ut urna id porta.
+
+In quis augue pharetra, ultrices elit eget, tincidunt libero. Nulla eu sem turpis. Praesent eros enim, convallis quis blandit in, suscipit vel odio. Curabitur molestie sollicitudin massa, non egestas elit. Proin sagittis, sapien sed varius vehicula, tellus nulla luctus orci, non sollicitudin est purus non velit. In ultrices urna nec dui volutpat accumsan in nec lacus. Curabitur euismod semper leo et laoreet. Nam a vehicula ex. Mauris in nisi diam. Nunc et pellentesque nibh, ac varius turpis.
+
+</p>
+	</div>
+	<hr>
+	<div class="container-flow">
+		<h2>.container-flow</h2>
+		<p>100% dello spazio SENZA padding laterale</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas.
+
+Proin vulputate dui nibh, et molestie turpis malesuada ut. Sed blandit elit at purus convallis scelerisque. Sed dictum sollicitudin nisi nec imperdiet. In at eros venenatis, efficitur eros eget, auctor neque. Vestibulum rutrum, nunc a hendrerit sollicitudin, turpis ex eleifend quam, id laoreet lectus velit eu arcu. Aenean nunc libero, eleifend at elit et, finibus porttitor felis. Nulla facilisi. Cras mattis tortor a nulla sollicitudin scelerisque. Vestibulum laoreet tellus sed mauris mattis mattis.
+
+Maecenas ex dui, porta vel consequat in, aliquet vitae lacus. Nunc consectetur ullamcorper pharetra. Fusce sagittis dignissim tortor, eu dignissim ligula semper a. Quisque pellentesque maximus magna, consectetur interdum sem tincidunt vel. Suspendisse potenti. Praesent id est ac lacus tincidunt facilisis. Morbi sodales elementum sem sed aliquet. Pellentesque orci odio, vestibulum rutrum arcu ornare, fringilla auctor erat. Proin sem sem, iaculis a sapien ut, aliquam laoreet risus. Pellentesque a odio scelerisque felis condimentum aliquam. Mauris nec pulvinar mauris. Nulla condimentum arcu nibh, et faucibus libero rhoncus a.
+
+Pellentesque at velit mi. Sed semper maximus laoreet. Curabitur vel blandit est. Pellentesque pellentesque lectus elit, ac vulputate nibh pharetra pellentesque. Aenean hendrerit in dui et vulputate. In nec purus nec mi vulputate tristique. Donec porta, arcu facilisis eleifend convallis, erat risus scelerisque dolor, eu auctor lorem quam eu neque. Nam et tellus sollicitudin, fringilla quam nec, condimentum felis. Ut egestas ut urna id porta.
+
+In quis augue pharetra, ultrices elit eget, tincidunt libero. Nulla eu sem turpis. Praesent eros enim, convallis quis blandit in, suscipit vel odio. Curabitur molestie sollicitudin massa, non egestas elit. Proin sagittis, sapien sed varius vehicula, tellus nulla luctus orci, non sollicitudin est purus non velit. In ultrices urna nec dui volutpat accumsan in nec lacus. Curabitur euismod semper leo et laoreet. Nam a vehicula ex. Mauris in nisi diam. Nunc et pellentesque nibh, ac varius turpis.
+
+</p>
+    </div>
+    <div class="container">
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

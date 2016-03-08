@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smooth scroll</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Bootstrap Smooth-scroll">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+  body {
+      position: relative; 
+	}
+	.container{ 
+		padding-top:50px;
+		min-height:500px
+	}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#main-navbar">
+<nav id="main-navbar" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav myscroller">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#jqueryplugin">I plug-in jQuery</a></li>
+          <li><a href="#scroller">Lo Scroller</a></li>
+          <li><a href="#risultato">Il risultato</a></li>
+          <li><a href="#funzionamento">Funzionamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> 
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Smooth scroller</h1>
+        <p>Un plug-in per addolcire lo scorrimento della pagina</p>
+      </div>
+    </div>   
+<div id="intro" class="container">
+	<h1>Smooth scroll</h1>
+  <p>L'integrazione con <a href="https://jquery.com/">jQuery</a> permette di aggiungere caratteristiche ed estendere le potenzialità di Bootstrap con semplicità.</p>
+  <p>In questo esempio creiamo un piccolo plug-in jQuery per animare lo scorrimento della pagina al click sui link del menu principale.</p>
+  <div class="alert alert-info"><p>NB: Il codice del plug-in è nel file <i>js/plugins.js</i></p></div>
+</div>
+<div id="jqueryplugin" class="container">
+  <h2>I plug-in in jQuery</h2>
+   <p>Scrivere una funzione come plug-in per jQuery ha il vantaggio di estendere la libreria, integrando la nostra funzione e potendola richiamare assieme a tutte le altre funzioni jQuery di cui si ha bisogno sempre con lo stesso metodo.</p>
+   <p>Per scrivere una funzione che faccia da plug-in occorre rispettare una determinata sintassi.</p>
+	<p>Un plug-in inizia tendenzialmente così:</p>
+<pre><code>
+(function ( $ ) {
+  $.fn.something = function (one_or_more_values){
+		...	
+</code></pre>
+<p>e termina sempre così:</p>
+<pre><code>...
+}( jQuery ));
+</code></pre>		
+</div>
+<div id="scroller" class="container">
+  <h2>Lo Scroller</h2>	
+ <p>Siccome stiamo costruendo una funzione per lo scrolling chiameremo il nostro plug-in <code>scroller</code>, e passeremo alla funzione un valore che chiameremo <code>selector</code> che rappresenta ovvero la classe o id della lista di ancore interne alla pagina.</p>	
+<pre><code>
+(function ( $ ) {
+  $.fn.scroller = function (selector){
+</code></pre>
+<p>Quindi, per evitare coflitti andremo a rendere più stretta la regola che definisce il <code>selector</code>.</p>
+<pre><code>
+  var selector="ul"+selector+" li a[href^='#']";
+</code></pre>
+<p>Quindi definiremo il comportamento della pagina usando sia funzioni native di javascript sia le funzioni di jQuery.</p>
+<pre><code>
+  //aziona il comportamento dello script al click di un elemento identificato come selector
+  $(selector).on('click', function(e) {
+   // previene il comportamento di default dei link
+   e.preventDefault();
+</code></pre>
+<p>Usiamo la funzione <code>hash</code> javascript per salvare in una variabile l'ancora del selettore</p>
+<p>cfr. <a href="http://www.w3schools.com/jsref/prop_loc_hash.asp">http://www.w3schools.com/jsref/prop_loc_hash.asp</a></p>
+<pre><code>   
+   var hash = this.hash;
+</code></pre>
+<p>Recuperiamo le coordinate dell'oggetto con la funzione jQuery <code>offset().top</code></p>
+<p>cfr. <a href="http://api.jquery.com/offset/">http://api.jquery.com/offset/</a></p>
+<pre><code>   
+  var target = $(hash).offset().top;
+</code></pre>
+<p>Animiamo la pagina facendola scorrere verso l'alto per i pixel definiti dal <code>target</code>.</p>
+<p>cfr. <a href="http://api.jquery.com/animate/">http://api.jquery.com/animate/</a></p>
+<p>cfr. <a href="http://www.w3schools.com/jquery/jquery_animate.asp">http://www.w3schools.com/jquery/jquery_animate.asp</a></p>
+<pre><code>
+  // animate
+  $('html, body').animate({
+    scrollTop: target
+    }, 
+    1000, 
+    function(){
+      window.location.hash = hash;
+      });
+   });
+</code></pre>
+</div>
+<div id="risultato" class="container">
+	<h2>Il risultato</h2>
+	<p>Alla fine il nostro script apparirà così:</p>
+	<pre><code>
+(function ( $ ) {
+	$.fn.scroller = function (selector){		
+		var selector="ul"+selector+" li a[href^='#']";		
+		$(selector).on('click', function(e) {
+			e.preventDefault();
+			console.log(selector);
+			var hash = this.hash;
+			var target = $(hash).offset().top;
+			$('html, body').animate(
+				{
+				scrollTop: target
+				}, 
+				1000, 
+				function(){window.location.hash = hash;}
+			);
+		});
+	};
+}( jQuery ));
+	</code></pre>
+</div>	
+<div id="funzionamento" class="container">
+  <h2>Il funzionamento</h2>
+  <p>A questo punto per permettere allo scroller di funzionare dobbiamo:</p> 
+  <ul>
+	<li>
+		aggiungere una classe funzionale alla lista di link presenti nella navbar, che chiameremo <code>.myscroller</code>
+<pre><code>
+&lt;nav ...
+	&lt;ul class="nav navbar-nav myscroller"&gt;
+	...
+</code></pre>
+	</li>
+	<li>
+		lanciare il trigger per jQuery, così:
+	<pre><code> $().scroller(".myscroller");</code></pre>
+	</li>
+	<li>qualche piccolo correttivo del CSS ci aiuterà a evitare che i titoli delle sezioni finscano sotto la barra di navigazione quando la pagina scorre, ad es.:</li>
+<pre><code>
+.container{ 
+	padding-top:50px;
+	min-height:500px
+	}
+</code></pre>
+  </ul>
+</div>
+<div class="container">
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+			$().scroller(".myscroller");		
+
+		});
+		</script>
+	</body>
+</html>

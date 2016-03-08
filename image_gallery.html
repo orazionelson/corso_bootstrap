@@ -1,0 +1,186 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Image gallery</title>
+        <meta name="description" content="Bootstrap Image gallery">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.image-gallery/3.1.0/css/bootstrap-image-gallery.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+          #links img{
+			  width:150px;
+			  }
+          #links a,#links a:hover{
+			  text-decoration:none;
+			  }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Bootstrap Image Gallery</h1>
+        <p><a href="https://blueimp.github.io/Bootstrap-Image-Gallery/">Bootstrap Image Gallery</a> è un'estensione per Bootstrap di <a href="https://blueimp.github.io/Gallery/">blueimp Gallery</a>.</p>
+      </div>
+    </div>
+	<div class="container">
+		<p>Per installare Bootstrap Image Gallery è necessario incorporare nella pagina:</p>
+		<ul>
+			<li>I CSS: <code>blueimp-gallery.css</code> e <code>bootstrap-image-gallery.css</code> dopo il CSS principale di Bootstrap</li>
+			<li>I Javascript: <code>jquery.blueimp-gallery.js</code> e <code>bootstrap-image-gallery.js</code> dopo il JS di Bootstrap</li>
+		</ul>
+		<pre id="step_one"><code>
+//nella head
+&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.image-gallery/3.1.0/css/bootstrap-image-gallery.min.css"&gt;
+...
+//dopo il footer
+&lt;script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/bootstrap.image-gallery/3.1.0/js/bootstrap-image-gallery.min.js"&gt;&lt;/script&gt;
+		</code></pre>
+		<p>Occorre quindi aggiungere il codice della <a href="modal.html">finestra modale</a> che conterrà la foto, meglio se dopo il <code>footer</code></p>
+<pre class="pretty-pre">
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+</pre>
+	<div class="alert alert-info">
+	<p>Tip: posso disattivare la finestra modale in stile Bootstrap e attivare la visualizzazione di default di blueimp settando l'attributo <code>data-use-bootstrap-modal="false"</code>.</p>
+	<pre><code>
+&lt;div id="blueimp-gallery" class="blueimp-gallery"  data-use-bootstrap-modal="false"&gt;
+	...
+&lt;/div&gt;
+	</code></pre>
+	</div>
+			<p>Sarà possibile creare una galleria con immagini e collegamenti. Nei <span class="lead">link</span> l'attributo <code>data-gallery</code> attiverà lo script.</p>
+	<div id="links">
+	    <a href="img/example.jpg" title="Field" data-gallery>
+	        <img src="img/example.jpg" class="img-thumbnail" alt="Field">
+	    </a>
+	    <a href="img/example2.jpg" title="Tulips" data-gallery>
+	        <img src="img/example2.jpg" class="img-thumbnail" alt="Tulips">
+	    </a>
+	</div>
+	<pre><code>
+&lt;div id="links"&gt;
+    &lt;a href="img/example.jpg" title="Field" data-gallery&gt;
+        &lt;img src="img/example.jpg" class="img-thumbnail" alt="Field"&gt;
+    &lt;/a&gt;
+    &lt;a href="img/example2.jpg" title="Tulips" data-gallery&gt;
+        &lt;img src="img/example2.jpg" class="img-rounded" alt="Tulips"&gt;
+    &lt;/a&gt;
+&lt;/div&gt;	
+	</code></pre>
+    <hr>
+
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bootstrap.image-gallery/3.1.0/js/bootstrap-image-gallery.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+		
+    </body>
+</html>

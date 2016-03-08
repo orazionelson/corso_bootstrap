@@ -1,0 +1,157 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tabs</title>
+        <meta name="description" content="Bootstrap tabs">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Tabs</h1>
+        <p>Mostra il contenuto in tabs</p>
+      </div>
+    </div>
+    <div class="container">
+		<p>Come si attiva:</p>
+		<p>Una lista di link che contengono:</p>
+		<ul>
+		<li>Trigger: <code>data-toggle="tab"</code></li>
+		<li>Puntatore: <code>href="#testo"</code></li>
+		</ul>
+		<p>Nell'elemento con classe <code>.tab-content</code> i pannelli con:</p>
+		<ul><li>Id corrispondente al href dei link. Es. <code>id="testo"</code></li></ul>
+<hr>
+	  
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#testo" aria-controls="testo" role="tab" data-toggle="tab">Testo</a></li>
+	    <li role="presentation"><a href="#griglia" aria-controls="griglia" role="tab" data-toggle="tab">Griglia</a></li>
+	    <li role="presentation"><a href="#immagine" aria-controls="immagine" role="tab" data-toggle="tab">Immagine</a></li>
+	    <li role="presentation"><a href="#form" aria-controls="form" role="tab" data-toggle="tab">Form</a></li>
+	  </ul>
+	
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="testo">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas..</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="griglia">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="immagine">
+			<img class="img-responsive img-rounded center-block" src="img/corso.png" alt="">
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="form">
+			<form class="form-inline" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+	    </div>
+	  </div>
+
+<hr>
+<pre class="pretty-pre">
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#testo" aria-controls="testo" role="tab" data-toggle="tab">Testo</a></li>
+	    <li role="presentation"><a href="#griglia" aria-controls="griglia" role="tab" data-toggle="tab">Griglia</a></li>
+	    <li role="presentation"><a href="#immagine" aria-controls="immagine" role="tab" data-toggle="tab">Immagine</a></li>
+	    <li role="presentation"><a href="#form" aria-controls="form" role="tab" data-toggle="tab">Form</a></li>
+	  </ul>
+	
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="testo">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut metus magna. Maecenas in sapien sed mi accumsan vehicula. Proin consequat pellentesque ligula eu imperdiet. Integer vel ante at diam porttitor eleifend ac sed mi. Cras id vehicula odio, vitae venenatis est. Donec ex ipsum, commodo eget augue eget, euismod placerat libero. In gravida elementum sem eu volutpat. Aenean mi enim, blandit vitae nulla vitae, eleifend tempus ligula. Duis lorem ligula, ultricies in elit non, sodales ornare massa. Phasellus accumsan odio vel orci interdum egestas..</p>
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="griglia">
+			<div class="row">
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+				<div class="col-md-4">.col-md-4</div>
+			</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="immagine">
+			<img class="img-responsive img-rounded center-block" src="img/corso.png" alt="">
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="form">
+			<form class="form-inline" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+	    </div>
+	  </div>
+</pre>
+
+		  <div class="alert alert-info">
+		  Tip: la classe <code>.fade</code> nei singoli pannelli attiva un effetto di dissolvenza.
+		  </div>
+		  <div class="alert alert-info">
+		  Tip: la classe <code>.nav-tabs</code> può essere sostituita da <code>.nav-pills</code> per uno stile a pulsanti.
+		  </div>
+	
+	<hr>
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+		<script>
+
+$('#myButton')
+    .click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        setTimeout(function () {
+            btn.button('reset')
+        }, 3000)
+    });  
+</script>
+
+    </body>
+</html>

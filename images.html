@@ -1,0 +1,89 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Immagini</title>
+        <meta name="description" content="Bootstrap Immagini">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+                background-color: #DDD;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Immagini</h1>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+	<h2>Esempi</h2>	
+	  <img class="" src="img/corso.png" alt="corso bootstrap">
+   <hr>
+	<h2>Inscrivi l'immagine in un cerchio</h2>
+	<code>Classe: .img-circle</code><br><br>
+	  <img class="img-circle" src="img/corso.png" alt="corso bootstrap">
+   <hr>
+	<h2>Arrotonda gli angoli</h2>
+	<code>Classe: .img-rounded</code><br><br>
+	  <img class="img-rounded" src="img/corso.png" alt="corso bootstrap">
+   <hr>
+	<h2>Stile per icone</h2>
+	<code>Classe: .img-thumbnail</code><br><br>
+	  <img class="img-thumbnail" src="img/corso.png" alt="corso bootstrap">
+   <hr>
+	<h2>Rendi responsive</h2>
+	<p>L'immagine è sempre al 100% della larghezza suo contenitore se questi è più stretto dell'immagine</p>
+	<code>Classe: .img-responsive</code><br><br>
+	  <div style="width: 100px; border:1px solid black">
+		  <img class="img-responsive" src="img/corso.png" alt="corso bootstrap">
+	  </div>
+   <hr>
+	<h2>Centra in un elemento</h2>
+	<code>Classe: .center-block</code><br><br>
+	  <div style="width: 100%; border:1px solid black">
+		  <img class="center-block" src="img/corso.png" alt="corso bootstrap">
+	  </div>
+	<hr>    
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

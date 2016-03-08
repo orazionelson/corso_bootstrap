@@ -1,0 +1,141 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tour</title>
+        <meta name="description" content="Bootstrap Tour">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/css/bootstrap-tour.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Bootstrap Tour</h1>
+        <p><a href="http://bootstraptour.com/">Bootstrap Tour</a> è uno script che ci permette di costruire una guida interattiva usando i <a href="tooltip_popover.html">popover</a> di Bootstrap.</p>
+      </div>
+    </div>
+    <div class="container">
+	    <hr>
+		<p class="text-center">
+	      <button type="button" id="start" class="btn btn-success btn-lg" data-demo>
+	        <span class="glyphicon glyphicon-play"></span>
+	        Esempio
+	      </button>
+	    </p>
+    
+		<p>Per installare BT è necessario incorporare nella pagina:</p>
+		<ul>
+			<li>Il CSS: <code>bootstrap-tour.css</code>, dopo il CSS principale di Bootstrap</li>
+			<li>Il Javascript: <code>bootstrap-tour.js</code> dopo il JS di Bootstrap</li>
+		</ul>
+		<pre id="step_one"><code>
+//nella head
+&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/css/bootstrap-tour.min.css"&gt;
+...
+//dopo il footer
+&lt;script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/js/bootstrap-tour.min.js"&gt;&lt;/script&gt;
+		</code></pre>
+		<p>Instanziare il tour nel javascript.</p>
+		<pre id="step_two"><code>
+// Instance the tour
+var tour = new Tour({
+	
+  steps: [
+  {
+    element: "#step_one",
+    title: "Title of my step",
+    content: "Content of my step"
+  },
+  {
+    element: "#step_two",
+    title: "Title of my step",
+    content: "Content of my step"
+  }
+]});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start();		
+		</code></pre>
+    
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/js/bootstrap-tour.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+
+
+			// Instance the tour
+			var tour = new Tour({	
+			  steps: [
+			  {
+			    element: "#step_one",
+			     placement: "top",
+			    title: "CSS e JS",
+			    content: "Incorporare nel codice i CSS e i JS necessari, in questo esempio viene fatto via CDN"
+			  },
+			  {
+			    element: "#step_two",
+			    placement: "top",
+			    title: "Steps",
+			    content: "Definire gli steps della guida"
+			  }
+			],
+			backdrop: true,
+			});
+		
+			$('#start').on('click',function(){
+				// Initialize the tour
+				tour.init(true);
+			
+				// Start the tour
+				tour.start(true);	
+				});
+		});
+		
+			
+
+			
+		</script>
+    </body>
+</html>

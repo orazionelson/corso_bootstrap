@@ -1,0 +1,199 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Validator</title>
+        <meta name="description" content="Bootstrap validator">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Bootstrap validator</h1>
+        <p>Validare i form lato client</p>
+        <a href="http://1000hz.github.io/bootstrap-validator/">http://1000hz.github.io/bootstrap-validator/</a>
+      </div>
+    </div>
+    <div class="container">
+		<p>Bootstrap validator è un'estensione che ci permette di verficare e validare i campi di un form prima dell'invio.</p>
+		<p>Per installarla possiamo:</p>
+			<ul>
+				<li>A) Scaricare lo script da GitHub e mettere il file <code>validator.js</code> nella nostra cartella dei javascript e quindi creare il link nel codice HTML della pagina.<br>
+				<pre class="pretty-pre"><script src="js/validator.min.js"></script></pre></li>
+				<li>B) Linkare lo script via CDN.<br>
+				<pre class="pretty-pre"><script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.9.0/validator.min.js"></script></pre>
+				</li>
+			</ul>
+		<p>Analogamente a i javascritp nativi di Bootstrap anche Validator si attiva aggiungendo l'attributo <code>data-toggle="validator"</code> al form da validare.</p>
+		<pre class="pretty-pre">
+<form role="form" data-toggle="validator">
+  ...
+</form>
+		</pre>
+	<p>Lo script tiene conto, per quanto possibile, della nomenclatura standard di HTML5 per i tipi di input:</p>	
+	<ul>
+		<li>type="email"</li>
+		<li>type="url"</li>
+		<li>type="number", di concerto con gli attributi min e max</li>
+		<li>pattern="Reg(ular )?Exp(ression)?"</li>
+		<li>required</li>
+	</ul>
+<p>Ci sono, inoltre, tre attributi non-standard evocati tramite data-*:</p>
+<ul>
+	<li>data-match="#inputToMatch", per gestire il match tra diversi input, ad esempio la conferma di una password</li>
+	<li>data-minlength="5", per forzare un campo ad essere compilato con un numero minimo di caratteri</li>
+	<li>data-remote="/path/to/remote/validator", per validare un campo a fronte di un file remoto con una chiamata via AJAX</li>
+</ul>
+<p>Anche per i messaggi di aiuto e di errore la gestione è semplice; il testo del messaggio è contenuto in un attributo del campo input <code>data-error="Error message"</code>e apparirà nel contenitore successivo indentato con due classi <code>help-block</code>e <code>with-errors</code>:</p>
+<pre class="pretty-pre">
+<div class="help-block with-errors">
+...
+</div>
+</pre>
+	<hr>
+<h2>Esempio</h2>
+<form class="form" data-toggle="validator" role="form">
+  <div class="form-group">
+    <label for="inputName" class="control-label">Nome</label>
+    <input type="text" class="form-control" id="inputName" placeholder="Mario Rossi" required>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Email non valida" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+	<label for="inputPassword" class="control-label">Password</label>
+    <div class="form-group">
+      <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" data-error="Caratteri non sufficienti" required>
+      <div class="help-block with-errors">Minimo 6 caratteri</div>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="La password non coincide" placeholder="Confirm" required>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="ruolo" required>
+        Utente
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="ruolo" required>
+        Admin
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="La spunta è obbligatoria" required>
+        Accetto!
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<hr>
+<pre class="pretty-pre">
+	<form class="form" data-toggle="validator" role="form">
+  <div class="form-group">
+    <label for="inputName" class="control-label">Nome</label>
+    <input type="text" class="form-control" id="inputName" placeholder="Mario Rossi" required>
+  </div>
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Email non valida" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="form-group">
+	<label for="inputPassword" class="control-label">Password</label>
+    <div class="form-group">
+      <input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" data-error="Caratteri non sufficienti" required>
+      <div class="help-block with-errors">Minimo 6 caratteri</div>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="La password non coincide" placeholder="Confirm" required>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="radio">
+      <label>
+        <input type="radio" name="ruolo" required>
+        Utente
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input type="radio" name="ruolo" required>
+        Admin
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="La spunta è obbligatoria" required>
+        Accetto!
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+</pre>
+	<hr>
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.9.0/validator.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>

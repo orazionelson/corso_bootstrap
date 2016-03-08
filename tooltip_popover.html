@@ -1,0 +1,181 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tooltip &amp; Popover</title>
+        <meta name="description" content="Bootstrap Tooltip e Popover">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Tooltip &amp; Popover</h1>
+        <p>Mostra informazioni in un fumetto</p>
+      </div>
+    </div>
+    <div class="container">
+		<h2>Tooltip</h2>
+		<p>Mostra al passaggio del mouse il valore dell'attributo <b>title</b> in un fumetto posizionabile rispetto all'elemento.</p>
+		<p>Come si attiva:</p>
+		<p>Nell'elemento:</p>
+		<ul>
+			<li>Trigger: <code>data-toggle="tooltip"</code></li>
+			<li>Posizionamento: <code>data-placement="top|right|bottom|left"</code></li>
+			<li>Contenuto: <code>title="Testo mostrato nel tooltip"</code></li>
+		</ul>
+		<p class="text-danger">Attenzione: il javascript tooltip non si attiva tramite il solo attributo <code>data-toggle</code>, occorre una chiamata javascript del come riportato nell'esempio.</p>
+<hr>
+       <div class="text-center">
+			<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+			<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+			
+			<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+			
+			<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+		</div>
+<hr>
+	<h3>HTML</h3>
+<pre class="pretty-pre">
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+</pre>
+	<h3>Javascript</h3>
+<pre>
+<code>
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+</code>
+</pre>
+	<div class="alert alert-info">
+		  Tip: E' possibile personalizzare lo stile del popover con le classi <code>.tooltip, .tooltip-title, .tooltip-arrow</code>
+	</div>	
+	<hr>
+	<h2>Popover</h2>
+	<p>Simile al tooltip ma le informazioni il fumetto con le info si attiva al click.</p>
+		<p>Come si attiva:</p>
+		<p>Nell'elemento:</p>
+		<ul>
+			<li>Trigger: <code>data-toggle="popover"</code></li>
+			<li>Posizionamento: <code>data-placement="top|right|bottom|left"</code></li>
+			<li>Contenuto: 
+				<ul>
+					<li>Titolo del fumetto: <code>title="Testo mostrato titolo del popover"</code></li>
+					<li>Corpo del fumetto: <code>data-content="Testo mostrato nel popover"</code></li>
+				</ul>
+			</li>
+		</ul>
+	<p class="text-danger">Attenzione: anche Popover va attivato tramite un'esplicita chiamata javascript del come riportato nell'esempio.</p>
+	
+	<hr>
+	      <div class="text-center">
+			<h3>PopOver</h3>
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+			  Popover on left
+			</button>
+			
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+			  Popover on top
+			</button>
+			
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+			sagittis lacus vel augue laoreet rutrum faucibus.">
+			  Popover on bottom
+			</button>
+			
+			<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+			  Popover on right
+			</button>
+       </div>
+	<hr>
+	<h3>HTML</h3>
+<pre class="pretty-pre">
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+</pre>
+	<h3>Javascript</h3>
+<pre>
+<code>
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+</code>	
+</pre>
+	<div class="alert alert-info">
+		  Tip: E' possibile personalizzare lo stile del popover con le classi <code>.popover, .popover-title, .popover-content</code>
+	</div>
+	
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+		
+		<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})		
+		</script>
+
+    </body>
+</html>

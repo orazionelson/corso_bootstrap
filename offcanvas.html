@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Off-canvas</title>
+        <meta name="description" content="Bootstrap off-canvas">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /*Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    right: -50%;
+  }
+
+ .row-offcanvas {
+    position: relative;
+    right: 0;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas.active {
+    right: 50%; /* 6 columns */
+  }
+}            
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+     <div class="container">
+      <div class="row row-offcanvas">
+        <div class="col-xs-12 col-sm-9">
+		    <div class="jumbotron">     
+		        <p class="pull-right visible-xs">
+		            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+		        </p>
+		        <h1>Off-canvas</h1>
+		        <p>L'off-canvas è una tecnica di navigazione, particolarmente utilizzata per Mobile, in cui un menù è posizionato fuori dalla viewport e, a seguito di un'azione, spinge (o scivola) sulla pagina fino ad essere fruibile dall'utente.</p>
+		        <p>cfr. <a href="https://getbootstrap.com/examples/offcanvas/">https://getbootstrap.com/examples/offcanvas/</a></p>
+		    </div>
+		    <hr>
+              <p>Con bootstrap possiamo combinare griglie e CSS per creare un menù off-canvas.</p>
+             <hr> 
+              <h2>HTML</h2>
+              <p>Realizziamo un bottone, che sia visibile solo per device extra-small, cui assegniamo un trigger secondo lo stile di Bootstrap: <code>data-toggle="offcanvas"</code></p>
+              <pre class="pretty-pre">
+<p class="pull-right visible-xs">
+	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+</p>              
+			</pre>
+              <p>Costruiamo una griglia con due colonne, la prima occcupa 12/12 da xs a sm, quindi, da sm in poi occupa 9/12:</p>
+              <pre class="pretty-pre">
+<div class="col-xs-12 col-sm-9">
+	...
+</div>	                      
+              </pre>
+              <p>La seconda colonna occupa 6/12 da xs a sm, quindi occupa 3/12:</p>
+              <pre class="pretty-pre">
+<div class="col-xs-6 col-sm-3">
+	...
+</div>	                      
+              </pre>
+              <p>La nostra struttura apparirà così:</p>
+              <pre  class="pretty-pre">
+<p class="pull-right visible-xs">
+	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+</p>				  
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-9">
+			...
+		</div>
+		<div class="col-xs-6 col-sm-3">
+			...
+		</div>
+	</div>
+</div>
+			</pre>
+			<p>Dentro la prima colonna includiamo la nostra pagina, nella seconda un menù.</p>
+			<pre class="pretty-pre">
+<div class="col-xs-12 col-sm-9">
+	Lorem ipsum dolor sit amet...
+</div>
+<div class="col-xs-6 col-sm-3">
+	<div class="list-group">
+		<a href="#" class="list-group-item active">Link</a>
+		<a href="#" class="list-group-item">Link</a>
+		<a href="#" class="list-group-item">Link</a>
+	</div>			
+</div>
+			</pre>
+			<hr>
+			<h2>CSS</h2>
+			<p>Con queste impostazioni, al di sotto dei 768px la colonna di destra flotterà sotto quella di sinistra. Per evitarlo forziamo il comportamento di default di Bootstrap associando alla colonna del menù una classe <code>.sidebar-offcanvas</code>, che al di sotto di una certa risoluzione lo posizioni maniera assoluta.  </p>
+<pre><code>
+@media screen and (max-width: 767px) {
+	.sidebar-offcanvas {
+		position: absolute;
+		top: 0;
+		right: -50%;
+	}
+	
+}
+</code></pre>
+<p>Sempre nella media query creiamo una classe, da associare a tutta la <code>.row</code>, che fissi il suo margine destro indipendentemente dalla viewport e che scorra con una certa "dolcezza" se soggetta a una transition:</p>
+<pre><code>
+	.row-offcanvas {
+	    position: relative;
+	    right: 0;
+	    -webkit-transition: all .25s ease-out;
+	         -o-transition: all .25s ease-out;
+	            transition: all .25s ease-out;
+	  }
+</code></pre>
+<p>Non ci resta che concatenare questa classe con una classe "trigger", che chiameremo <code>.active</code>, che sposti la nostra <code>.row</code> del 50% spingendola da destra:</p>
+<pre><code>
+  .row-offcanvas.active {
+    right: 50%; /* 6 columns */
+  }
+</code></pre>
+<p>Manca solo un piccolo accorgimento, una modifica sull'intera pagina per evitare che con device più stretti appaia uno scroller orizzontale nella finestra del browser:</p>
+<pre><code>
+html,
+body {
+  overflow-x: hidden; /*Prevent scroll on narrow devices */
+}
+</code></pre>
+<p>Il nostro CSS apparirà così:</p>
+<pre><code>
+html,
+body {
+  overflow-x: hidden; /*Prevent scroll on narrow devices */
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    right: -50%;
+  }
+
+ .row-offcanvas {
+    position: relative;
+    right: 0;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas.active {
+    right: 50%; /* 6 columns */
+  }
+}            
+</code></pre>
+<hr>
+<h2>HTML</h2>
+<p>Associamo le classi CSS alla nostra struttura:</p>
+              <pre  class="pretty-pre">
+<p class="pull-right visible-xs">
+	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+</p>				  
+<div class="container">
+	<div class="row row-offcanvas">
+		<div class="col-xs-12 col-sm-9">
+			Lorem ipsum dolor sit amet...
+		</div>
+		<div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+			<div class="list-group">
+				<a href="#" class="list-group-item active">Link</a>
+				<a href="#" class="list-group-item">Link</a>
+				<a href="#" class="list-group-item">Link</a>
+			</div>			
+		</div>
+	</div>
+</div>
+			</pre>
+			<hr>
+			<h2>jQuery</h2>
+			<p>Manca il trigger? Andiamo ad aggiungerlo con jQuery</p>
+<pre><code>
+$('[data-toggle="offcanvas"]').click(function () {
+	$('.row-offcanvas').toggleClass('active')
+});
+</code></pre>			
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->	<hr>
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+			
+			$('[data-toggle="offcanvas"]').click(function () {
+				$('.row-offcanvas').toggleClass('active')
+			});			
+					
+		});
+		</script>
+		<script>
+    </body>
+</html>

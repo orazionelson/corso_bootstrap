@@ -1,0 +1,182 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bottoni</title>
+        <meta name="description" content="Bootstrap Bottoni">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+                background-color: #DDD;
+            }
+        </style>
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	     <span class="sr-only">Toggle navigation</span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	     <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="index.html">Corso Bootstrap</a>
+	   </div> 
+	 </div>
+	</nav>				        
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Bottoni</h1>
+		<p>La classe <code>.btn</code> trasforma in un bottone questi elementi: <strong>a, button, input</strong></p>
+	<p>Ai bottoni si possono assegnare 7 stili e 4 ordini di grandezza:</p>
+		<pre><code>
+Stili:
+.btn-default
+.btn-primary
+.btn-success
+.btn-info
+.btn-warning
+.btn-danger
+.btn-link
+
+Grandezze:
+.btn-lg
+.btn-md (default)
+.btn-sm
+.btn-xs
+		</code></pre>
+      </div>
+    </div>
+
+    <div class="container">
+
+		<h2>Esempi</h2>
+		<h3>Elementi</h3>
+		<pre class="pretty-pre">
+<a class="btn btn-default" href="#" role="button">Link</a>
+<button class="btn btn-default" type="submit">Button</button>
+<input class="btn btn-default" type="button" value="Input">
+<input class="btn btn-default" type="submit" value="Submit">				
+		</pre>
+		<div class="well">
+			<a class="btn btn-default" href="#" role="button">Link</a>
+			<button class="btn btn-default" type="submit">Button</button>
+			<input class="btn btn-default" type="button" value="Input">
+			<input class="btn btn-default" type="submit" value="Submit">
+		</div>
+		<hr>
+		<h3>Stili</h3>
+		<p>
+        <button type="button" class="btn btn-default">.btn-default</button>
+        <button type="button" class="btn btn-primary">.btn-primary</button>
+        <button type="button" class="btn btn-success">.btn-success</button>
+        <button type="button" class="btn btn-info">.btn-info</button>
+        <button type="button" class="btn btn-warning">.btn-warning</button>
+        <button type="button" class="btn btn-danger">.btn-danger</button>
+        <button type="button" class="btn btn-link">.btn-link</button>
+      </p>
+      <hr>
+      <h3>Misure</h3>			
+		<p>
+        <button type="button" class="btn btn-xs btn-default">.btn-xs</button>
+        <button type="button" class="btn btn-sm btn-primary">.btn-sm</button>
+        <button type="button" class="btn btn-md btn-success">.btn-md</button>
+        <button type="button" class="btn btn-lg btn-info">.btn-lg</button>
+      </p>
+	<hr>
+	<h3>Combina più bottoni</h3>
+	<p>Classe: <code>.btn-group</code></p>
+	<div class="btn-group" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>
+	</div>
+	<hr>
+	<h3>Combina più gruppi in una toolbar</h3>
+	<p>Classi: <code>.btn-group</code> e <code>.btn-toolbar</code></p>
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>	
+  </div>
+  <div class="btn-group" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>  
+  </div>
+  <div class="btn-group" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>  
+  </div>
+</div>
+	<hr>
+	<h3>Dimensioni di un gruppo di bottoni</h3>
+	<p><code>.btn-group-lg/sm/xs</code></p>
+	<div class="btn-group btn-group-xs" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>
+	</div>	
+	<div class="btn-group btn-group-sm" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>
+	</div>
+	<div class="btn-group btn-group-lg" role="group">
+	  <button type="button" class="btn btn-default">Left</button>
+	  <button type="button" class="btn btn-default">Middle</button>
+	  <button type="button" class="btn btn-default">Right</button>
+	</div>	
+	<hr>
+	<h3>Organizza il gruppo in verticale</h3>
+	<p>Classe: <code>.btn-group-vertical</code></p>
+	<div class="btn-group-vertical btn-group-lg" role="group">
+	  <button type="button" class="btn btn-success">Top</button>
+	  <button type="button" class="btn btn-default">Center</button>
+	  <button type="button" class="btn btn-danger">Bottom</button>
+	</div>	
+	<hr>
+	<h3>Gruppi di checkbox o radio</h3>
+	<p>Combiniamo <code>data-toggle=”button”</code> con un <code>.btn-group</code> di input radio o checkbox, per rappresentarli come un gruppo di bottoni.</p>
+	<div class="btn-group" data-toggle="buttons">
+	  <label class="btn btn-primary active">
+	    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+	  </label>
+	  <label class="btn btn-primary">
+	    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+	  </label>
+	</div>
+
+      <footer>
+        <p>Alfredo Cosco <a href="http://www.nelsonweb.it">Nelsonweb.it</a> - <a href="http://nelsondev.blogspot.com">http://nelsondev.blogspot.com</a> 2016</p>
+      </footer>
+    </div> <!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pretty-pre').prettyPre();
+		});
+		</script>
+    </body>
+</html>
