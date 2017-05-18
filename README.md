@@ -1,4 +1,7 @@
 # Corso Bootstrap
+
+<a href="https://zenodo.org/badge/latestdoi/52438113"><img src="https://zenodo.org/badge/52438113.svg" alt="DOI"></a>
+
 <b>Corso Bootstrap</b> è il risultato di un corso di 10 ore su Bootstrap tenuto nel 2016.
 
 Il corso è organizzato in:
